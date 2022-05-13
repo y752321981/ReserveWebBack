@@ -1,4 +1,11 @@
 package com.jidai.manager.mapper;
 
-public class LoginMapper {
+import org.mapstruct.Mapper;
+import org.springframework.stereotype.Repository;
+
+@Mapper
+public interface LoginMapper {
+    Integer isAccountExist(String account);
+    String selectPassword(String account);
+    String selectName(String account);
 }

@@ -6,5 +6,6 @@ import io.swagger.annotations.Api;
 public enum LoginEnum {
     success,
     accountNotExist,
-    passwordError
+    passwordError,
+    fail
 }
