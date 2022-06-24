@@ -33,7 +33,7 @@ public class CacheService {
      * @param value
      * @return
      */
-    public <K, V> void add(K key, V value) {
+    public <K, V> void addValue(K key, V value) {
         try {
             if (value != null) {
                 redisTemplate
@@ -45,6 +45,20 @@ public class CacheService {
             throw new RuntimeException("数据缓存至redis失败");
         }
     }
+
+    public <k, v> void addSet(k key, v value) {
+        try {
+            if (value != null) {
+                redisTemplate
+                        .opsForSet()
+                        .add(DEFAULT_KEY_PREFIX + key, value.toString());
+            }
+        } catch (Exception e) {
+            log.error(e.getMessage(), e);
+            throw new RuntimeException("数据缓存至redis失败");
+        }
+    }
+
 
     /**
      * 数据缓存至redis并设置过期时间

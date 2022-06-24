@@ -1,12 +1,10 @@
 package com.jidai.manager.service.impl;
 
-import com.jidai.api.common.utils.JwtUtil;
 import com.jidai.api.login.pojo.enums.LoginEnum;
 import com.jidai.api.login.pojo.request.LoginRequest;
 import com.jidai.api.login.pojo.response.LoginResponse;
 import com.jidai.manager.mapper.LoginMapper;
 import com.jidai.manager.service.ILoginService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

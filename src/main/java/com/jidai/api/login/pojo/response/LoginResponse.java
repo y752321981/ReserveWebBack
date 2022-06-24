@@ -17,7 +17,10 @@ import java.io.Serializable;
 @Api("登录结果响应")
 public class LoginResponse implements Serializable {
     @ApiModelProperty("登录结果")
-    private Integer status;
+    private String msg;
+
+    @ApiModelProperty("登陆结果代码")
+    private String code;
 
     @ApiModelProperty("token")
     private String token;
